@@ -17,6 +17,7 @@ def lambda_handler(event=None, context=None):
 
             if type != "":
                 if 'Recon:IAMUser/MaliciousIPCaller.Custom' in type:
+                    #Not secure. should be passed and environment variables to function
                     dsm = Manager(username='username', password='password', tenant='ACME Corp')
                     print("************* Initiating connection to Deep Security As A Service")
                     ip = event['detail']['service']['action']['awsApiCallAction']['remoteIpDetails']['ipAddressV4']

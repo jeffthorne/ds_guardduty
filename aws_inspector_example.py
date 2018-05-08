@@ -17,6 +17,7 @@ for finding in findings_dict['findings']:
 print("Amazon Inspector Findings")
 print(cves)
 
+#Not secure. should be passed and environment variables to function
 dsm = Manager(username="username", password="password", tenant="ACME CORP")
 print("Getting DPI rules from DSM")
 rules = dsm.dpi_rules_all()
